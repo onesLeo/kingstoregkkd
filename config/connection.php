@@ -1,5 +1,5 @@
 <?php
-	$hostname='localhost:3308';
+	$hostname='localhost';
 	$user = 'root';
 	$password = '';
 	$mysql_database = 'kingstoredb';

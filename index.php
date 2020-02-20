@@ -1,5 +1,6 @@
 <?php
 	include_once('config/connection.php');
+	include_once('config/auth.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,7 +53,6 @@
     <?php
       //include sidebar section
       include("sections\sidebar.php");
-	  session_start();
     ?>
   <!-- container section start -->
   <section id="container" class="">
@@ -60,6 +60,7 @@
         <section class="wrapper">
         <div class="row">
           <div class="col-lg-12">
+						<h3>Selamat Datang <?php echo $_SESSION['username']; ?>!</h3>
             <h3 class="page-header"><i class="fa fa-files-o"></i> Form Belanja</h3>
             <ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="index.php">Home</a></li>
@@ -67,12 +68,12 @@
               <li><i class="fa fa-files-o"></i>Isi Belanja</li>
             </ol>
           </div>
-        </div>        
+        </div>
         <div class="row">
           <div class="col-lg-12">
             <section class="panel">
               <header class="panel-heading">
-                Form Belanja 
+                Form Belanja
               </header>
               <div class="panel-body">
                 <div class="form">
@@ -80,7 +81,7 @@
                    <div class="form-group">
                     <label class="control-label col-lg-2" for="pbarang">Pilih Barang</label>
                     <div class="col-lg-10">
-                      
+
                       <select id="pbarang" name="pbarang" data-live-search=true  class="form-control selectpicker input-sm m-bot15">
                                               <option value="" data-token="">----</option>
 											  <?php
@@ -100,7 +101,7 @@
                         <input class=" form-control" id="qtytersedia" readonly name="qtytersedia" type="text" />
                       </div>
 					</div>
-					
+
                     <div class="form-group ">
                       <label for="fullname" class="control-label col-lg-2">Harga per barang <span class="required"></span></label>
                       <div class="col-lg-10">
@@ -122,7 +123,7 @@
 				<div class="form-group">
                     <label class="control-label col-lg-2" for="gkkdsatelit">Pilih Tempat Pengiriman</label>
                     <div class="col-lg-10">
-                      
+
                       <select id="gkkdsatelit" name="gkkdsatelit" data-live-search=true  class="form-control selectpicker input-sm m-bot15">
                                               <option value="" data-token="">----</option>
 											  <?php
@@ -153,7 +154,7 @@
     </section>
 
   </section>
-  
+
   <!-- javascripts -->
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -169,13 +170,13 @@
   <!--<script src="js/form-validation-script.js"></script>-->
   <!--custome script for all page-->
   <script src="js/scripts.js"></script>
-  
-  
+
+
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="js/bootstrap-select.min.js"></script>
   <!-- nice scroll -->
 
-  
+
   	<script>
 		$(document).ready(function(){
 			$('#pbarang').change(function(){
@@ -195,13 +196,13 @@
 						$("#hpbarang").val(data.harga_perqty);
 						$("#idbarang").val(data.id_informasi_barang);
 					}
-					
+
 				})
 			})
-			
+
 		})
 	</script>
-  
+
   	<script>
 		$(document).ready(function(){
 			$('#gkkdsatelit').change(function(){
@@ -211,10 +212,10 @@
 				console.log("satelit name > "+gkkd_satelit_name);
 				$("#namasatelit").val(gkkd_satelit_name);
 			})
-			
+
 		})
 	</script>
-  
+
   	<script>
 		$(document).ready(function(){
 			$('#jpembelian').change(function(){
@@ -244,11 +245,11 @@
 				}
 
 			})
-			
+
 		})
 	</script>
 
-  
+
 </body>
 
 </html>

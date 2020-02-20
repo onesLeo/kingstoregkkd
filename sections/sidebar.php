@@ -22,6 +22,18 @@
             </ul>
           </li>
 
+          <li class="sub-menu">
+            <a href="javascript:;" class="">
+                          <i class="Setting"></i>
+                          <span>Setting</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+            <ul class="sub">
+              <li><a class="" href="logout.php">Log Out</a></li>
+              <li><a class="" href="detail.php">Profile Kamu</a></li>
+            </ul>
+          </li>
+
         </ul>
         <!-- sidebar menu end-->
       </div>
