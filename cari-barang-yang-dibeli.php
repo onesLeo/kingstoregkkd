@@ -1,7 +1,14 @@
+<?php
+	include_once('config/connection.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+	<?php
+		//include sidebar section
+		include("sections\header.php");
+	?>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Belanja Barang">
@@ -58,7 +65,7 @@
               <li><i class="fa fa-files-o"></i>Informasi Pencarian Barang</li>
             </ol>
           </div>
-        </div> 
+        </div>
 		 <div class="row">
 			 <div class="col-lg-6">
 				<div class="recent">
@@ -86,7 +93,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                        
+
                 </tbody>
               </table>
             </section>
@@ -131,7 +138,7 @@
   <script src="js/form-component.js"></script>
   <!-- custome script for all page -->
   <script src="js/scripts.js"></script>
-  
+
   <script>
 		$(document).ready(function(){
 			$('#search').change(function(){
@@ -142,32 +149,32 @@
 					url: 'scripts/cari_barang_basedon_kwitansi.php',
 					dataType: 'json',
 					data: {'id_barang':value_id},
-					success:function(data){						
+					success:function(data){
 						console.log("is success? > "+data);
 						console.log("is success? jumlah pembelian => "+data.jumlah_barang_dibeli);
 						console.log("is success? harga beli => "+data.total_harga_pembelian);
 						console.log("is success? no kwitansi => "+data.no_kwitansi);
 						console.log("is success? nama barang => "+data.nama_barang);
-						
+
 						var markup = "<tr><td></td><td>" + data.no_kwitansi + "<input type=\"hidden\" name=\"idbarangterbeli\" id=\"idbarangterbeli\" value="+data.id_barang_terbeli+" /></td><td>" + data.jumlah_barang_dibeli + "</td><td>" + data.total_harga_pembelian + "</td><td>" + data.nama_barang + "</td><td><form method=\"post\" action=""><input type=\"file\" name=\"uploadreceipt\" id=\"uploadreceipt\" multiple=\"multiple\"> <input type=\"submit\">Upload</button></form><td/></tr>";
 						$("table tbody").append(markup);
 					}
-					
+
 				})
 			})
-			
+
 		})
 	</script>
-	
+
 	<script>
 		$('#uploadreceipt').filestyle({
 		 input : false,
 		 buttonName : 'btn-danger',
 		 iconName : 'glyphicon glyphicon-folder-close'
-		});                 
-             
+		});
+
 </script>
-  
+
 </body>
 
 </html>

@@ -19,18 +19,7 @@
             <ul class="sub">
               <li><a class="" href="index.php">Belanja Barang</a></li>
               <li><a class="" href="cari-barang-yang-dibeli.php">Cari Pembelian</a></li>
-            </ul>
-          </li>
-
-          <li class="sub-menu">
-            <a href="javascript:;" class="">
-                          <i class="Setting"></i>
-                          <span>Setting</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-            <ul class="sub">
-              <li><a class="" href="logout.php">Log Out</a></li>
-              <li><a class="" href="detail.php">Profile Kamu</a></li>
+              <li><a class="" href="upload_page.php">Upload Bukti Pembayaran</a></li>
             </ul>
           </li>
 

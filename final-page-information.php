@@ -2,6 +2,10 @@
 <html lang="en">
 
 <head>
+  <?php
+		//include sidebar section
+		include("sections\header.php");
+	?>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Belanja Barang">
@@ -44,14 +48,14 @@
       //include sidebar section
 	  session_start();
       include("sections\sidebar.php");
-	  
+
 	  $no_kwitansi_finalpage = $_SESSION["no_kwitansi"];
 	  $no_telp_finalpage = $_SESSION["no_telp"];
 	  $cabang_penerima = $_SESSION["cabang_penerima"];
-	  
+
 	  session_unset();
 	  session_destroy();
-	  
+
     ?>
   <!-- container section start -->
   <section id="container" class="">
@@ -66,7 +70,7 @@
               <li><i class="fa fa-files-o"></i>Informasi Pembayaran</li>
             </ol>
           </div>
-        </div> 
+        </div>
 		 <div class="col-lg-6">
             <div class="recent">
               <h3>Berikut Informasi Pembayaran saudara:</h3>
@@ -91,7 +95,7 @@
   <!-- javascripts -->
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  
+
   <script type="text/javascript" src="js/jquery.validate.min.js"></script>
   <!-- nice scroll -->
   <script src="js/jquery.scrollTo.min.js"></script>

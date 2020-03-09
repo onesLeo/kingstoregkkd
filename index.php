@@ -6,6 +6,10 @@
 <html lang="en">
 
 <head>
+	<?php
+		//include sidebar section
+		include("sections\header.php");
+	?>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Belanja Barang">
@@ -54,13 +58,13 @@
       //include sidebar section
       include("sections\sidebar.php");
     ?>
+
   <!-- container section start -->
   <section id="container" class="">
     <section id="main-content">
         <section class="wrapper">
         <div class="row">
           <div class="col-lg-12">
-						<h3>Selamat Datang <?php echo $_SESSION['username']; ?>!</h3>
             <h3 class="page-header"><i class="fa fa-files-o"></i> Form Belanja</h3>
             <ol class="breadcrumb">
               <li><i class="fa fa-home"></i><a href="index.php">Home</a></li>

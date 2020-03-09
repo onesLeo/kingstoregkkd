@@ -70,17 +70,15 @@ VALUES ('$username', '$password', '$email', '$name', '$no_telp')";
     Author URL: https://bootstrapmade.com
   ======================================================= -->
 </head>
-<body class="bg-light">
+<body class="login-img3-body">
 
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-md-6">
+<div class="container">
+        <div class="login-wrap">
 
-        <h4>Bergabunglah bersama ribuan orang lainnya...</h4>
-        <p>Sudah punya akun? <a href="login.php">Login di sini</a></p>
+        <form class="login-wrap" method="POST">
+          <div class="login-wrap">
 
-        <form action="" method="POST">
-
+          </div>
             <div class="form-group">
                 <label for="name">Nama Lengkap</label>
                 <input class="form-control" type="text" name="name" placeholder="Nama kamu" />
@@ -107,13 +105,12 @@ VALUES ('$username', '$password', '$email', '$name', '$no_telp')";
             </div>
 
             <input type="submit" class="btn btn-success btn-block" name="register" value="Daftar" />
-
+            <h4>Sudah punya akun? <a href="login.php">Login di sini</a></h4>
         </form>
 
         </div>
 
         <div class="col-md-6">
-            <img class="img img-responsive" src="img/connect.png" />
         </div>
 
     </div>

@@ -1,6 +1,7 @@
 <?php
 
-include_once('../config/connection.php');
+	include_once('config/connection.php');
+	include_once('config/auth.php');
 
 $statusMsg = '';
 

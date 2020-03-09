@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Belanja Barang">
@@ -47,7 +46,7 @@
 	  include_once("config/connection.php");
       include("sections/sidebar.php");
 	  $sql_select="select no_telp, no_rekening_pembayaran from informasi_data_gkkd order by id_informasi_data_gkkd desc";
-	  if($result = mysqli_query($db,$sql_select)){  
+	  if($result = mysqli_query($db,$sql_select)){
 		while($rows = mysqli_fetch_row($result)){
 			$no_telp = $rows[0];
 			$no_rek = $rows[1];
@@ -70,12 +69,12 @@
               <li><i class="fa fa-files-o"></i>Informasi Pembayaran</li>
             </ol>
           </div>
-        </div>        
+        </div>
         <div class="row">
           <div class="col-lg-12">
             <section class="panel">
               <header class="panel-heading">
-                Pembayaran 
+                Pembayaran
               </header>
               <div class="panel-body">
                 <div class="form">
