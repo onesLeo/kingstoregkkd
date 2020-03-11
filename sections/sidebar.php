@@ -17,8 +17,8 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
             <ul class="sub">
-              <li><a class="" href="index.php">Belanja Barang</a></li>
-              <li><a class="" href="cari-barang-yang-dibeli.php">Cari Pembelian</a></li>
+              <li><a class="" href="index">Belanja Barang</a></li>
+              <li><a class="" href="cari-barang-yang-dibeli">Cari Pembelian</a></li>
             </ul>
           </li>
 

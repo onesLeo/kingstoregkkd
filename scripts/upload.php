@@ -5,10 +5,12 @@ include_once('../config/connection.php');
 $statusMsg = '';
 
 // File upload path
-$targetDir = "uploads/";
+$targetDir = "../uploads/";
 $fileName = basename($_FILES["uploadreceipt"]["name"]);
 $targetFilePath = $targetDir . $fileName;
 $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
+$filesToUpload = $_FILES["uploadreceipt"]["name"];
+$submitCheck = $_POST["submit"];
 
 if(isset($_POST["submit"]) && !empty($_FILES["uploadreceipt"]["name"])){
 	$idbarangterbeli= $_POST["idbarangterbeli"];
@@ -24,21 +26,24 @@ if(isset($_POST["submit"]) && !empty($_FILES["uploadreceipt"]["name"])){
                 $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
             }else{
                 $statusMsg = "File upload failed, please try again.";
-            } 
+            }
         }else{
             $statusMsg = "Sorry, there was an error uploading your file.";
         }
     }else{
         $statusMsg = 'Sorry, only JPG, JPEG, PNG, GIF, & PDF files are allowed to upload.';
     }
-	
-	header('location: index.php');
-	
+
+	header('location: ../uploaded-successfully');
+
 }else{
-	$filesToUpload = $_FILES["uploadreceipt"];
+    $idbarangterbeli= $_POST["idbarangterbeli"];
     $statusMsg = 'Please select a file to upload.';
 }
 
 // Display status message
-echo $statusMsg;
+echo $statusMsg." - Files To Upload > ".$filesToUpload;
+echo "<br/> submit > ".$submitCheck;
+echo "<br/> id barang terbeli > ".$idbarangterbeli;
+echo "<br/> File Type > ".$fileType;
 ?>

@@ -44,6 +44,7 @@
     <?php
       //include sidebar section
       include("sections\sidebar.php");
+	  $noKwitansi = 
     ?>
   <!-- container section start -->
   <section id="container" class="">
