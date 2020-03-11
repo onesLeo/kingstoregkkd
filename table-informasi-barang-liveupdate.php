@@ -2,7 +2,7 @@
 include_once('config/connection.php');
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="live-update">
 
 <head>
     <meta charset="utf-8">
@@ -96,7 +96,7 @@ include_once('config/connection.php');
     <!-- custom form validation script for this page-->
     <!--<script src="js/form-validation-script.js"></script>-->
     <!--custome script for all page-->
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts-liveupdate.js"></script>
 
     <script src="js/bootstrap-select.min.js"></script>
 
