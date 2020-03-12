@@ -10,6 +10,8 @@
 		$idsatelit = $_POST["gkkdsatelit"];
 		$qtytersedia = $_POST["qtytersedia"];
 		$nama_cabang_penerima_barang = $_POST["namasatelit"];
+		$nama_pembeli = $_POST["npembeli"];
+		$no_ktp = $_POST["noktp"];
 		$no_kwitansi = "KWI_".random_strings($n);
 		
 		$_SESSION['jml_beli'] = $jumlah_beli;
@@ -28,9 +30,13 @@
 		}
 
 		$query_insert = "insert into barang_terbeli(jumlah_barang_dibeli, total_harga_pembelian, no_kwitansi, fk_informasi_barang, fk_informasi_alamat_kirim) values ('".$jumlah_beli."','".$total_harga."','".$no_kwitansi."','".$idbarang."','".$idsatelit."')";
-		
-		if (mysqli_query($db,$query_insert)){
-			header('Location: ../information-afterpurchase.php');
+
+        if (mysqli_query($db,$query_insert)){
+            $id_of_barang_terbeli = mysqli_insert_id($db);
+            $query_insert_informasi_pembeli = "insert into informasi_pembeli(nama_pembeli, no_ktp, fk_barang_dibeli) values ('".$nama_pembeli."','".$no_ktp."','".$id_of_barang_terbeli."')";
+            if(mysqli_query($db,$query_insert_informasi_pembeli)){
+                header('Location: ../information-afterpurchase.php');
+            }
 		}else{
 			echo "id brg ".$idbarang."<br/>";
 			echo "jmlBeli ".$jumlah_beli."<br/>";

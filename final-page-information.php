@@ -73,7 +73,7 @@
             </div>
             <div class="">
               <p>Gunakan no kwitansi dibawah untuk mencari detail pembelian saudara dan melakukan upload bukti pembayaran, pada link dibawah ini:</p>
-              <p><link-upload></p>
+              <p><a href="cari-barang-yang-dibeli"> Cari Pembelian Berdasarkan No Kwitansi</a> </p>
               <br/>
               <h4>No Kwitansi Pembelian:</h4><b><?php echo $no_kwitansi_finalpage ?></b><br>
               <h4>Pengiriman akan dilakukan ke wilayah gkkd cabang berikut:</h4><b><?php echo $cabang_penerima ?></b><br/><br//>

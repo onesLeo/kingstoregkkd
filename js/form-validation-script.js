@@ -7,7 +7,13 @@ var Script = function () {
         // validate signup form on keyup and submit
         $("#form_pembelian").validate({
             rules: {
+                npembeli: {
+                    required: true
+                },
                 jpembelian: {
+                    required: true
+                },
+                noktp: {
                     required: true
                 },
 				pbarang: {
@@ -20,7 +26,13 @@ var Script = function () {
                     required: true
                 }
             },
-            messages: {                
+            messages: {
+                npembeli: {
+                    required: "Nama Pembeli harus diisi!"
+                },
+                noktp: {
+                    required: "No KTP harus diisi!"
+                },
                 jpembelian: {
                     required: "Jumlah Pembelian harus diisi!"
                 },
